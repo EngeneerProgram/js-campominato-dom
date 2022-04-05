@@ -54,6 +54,7 @@ footer{
 .cells{
     display:flex;
     flex-wrap: wrap;
+    cursor:pointer;
 }
 
 .cella{

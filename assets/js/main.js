@@ -40,6 +40,8 @@ function inizia_gioco(event){
             numero_celle = 100;
             numero_colonne = 10; 
             console.log(numero_celle, numero_colonne);
+            generate_number();
+            
             break;
         
         case "Intermedio":
@@ -75,4 +77,11 @@ for(let i = 1; i<=numero_celle; i++){
     area_gioco.append(cella);
 }
 
+}
+
+function generate_number(){
+    for(let i = 0; i<16; i++){
+        let numeri_casuali = Math.floor(Math.random() *100) +1;
+        console.log(numeri_casuali);
+    }
 }
