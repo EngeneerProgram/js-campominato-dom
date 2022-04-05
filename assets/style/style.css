@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+header{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+img{
+    vertical-align: middle;
+}
+
+.btn{
+    padding:1px 5px;
+    font-size: 15px;
+    margin:6px;
+}
+
+#difficoltà{
+    font-size: 15px;
+    padding:1px 5px;
+    text-align: center;
+}
