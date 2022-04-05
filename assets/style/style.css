@@ -2,9 +2,11 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    
 }
 
 header{
+    height: 10vh;
     display:flex;
     justify-content: space-around;
     align-items: center;
@@ -14,14 +16,50 @@ img{
     vertical-align: middle;
 }
 
-.btn{
-    padding:1px 5px;
-    font-size: 15px;
-    margin:6px;
+
+footer{
+    height: 10vh;
+
 }
 
-#difficoltà{
+.main{
+   
+    background-color: rgba(127, 255, 212, 1);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#livello{
     font-size: 15px;
-    padding:1px 5px;
-    text-align: center;
+    margin:20px;
+}
+
+.btn{
+    font-size: 15px;
+    padding: 1px 6px;
+}
+
+.container{
+    width: 1000px;
+    
+    margin:2rem auto;
+    display:flex;
+    justify-content: center;
+    
+    
+}
+
+
+.cells{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.cella{
+    border:1px solid black;
+    aspect-ratio: 1 / 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
 }
