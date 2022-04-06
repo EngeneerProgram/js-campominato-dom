@@ -23,65 +23,59 @@ o raggiunge il numero massimo possibile di numeri consentiti.
 
 //selezione select
 
-document.querySelector("form").addEventListener("submit", function(event){
-    event.preventDefault();
-    inizia_gioco(event);
+const game = document.querySelector(".start").addEventListener("click",function(){
+    start_game();
+    
 })
 
-function inizia_gioco(event){
-    let livello = event.target[0].value;
-    console.log(livello);
+function start_game(){
+    let cell_number;
+    let col_number;
+    const scelta = document.getElementById("scelta").value;
+    console.log(scelta);
 
-    let numero_celle, numero_colonne;
-    switch(livello){
-
-        case "Facile":
-            
-            numero_celle = 100;
-            numero_colonne = 10; 
-            console.log(numero_celle, numero_colonne);
-            generate_number();
-            
-            break;
+    if(scelta == "easy"){
+        cell_number = 100;
+        col_number = 10;
+        console.log("Livello facile", col_number, cell_number);
+        generateGrid(col_number, cell_number);
         
-        case "Intermedio":
-            
-            numero_celle=81;
-            numero_colonne= 9;
-            console.log(numero_celle, numero_colonne);
-            break;
         
-        case "Difficile":
-            
-            numero_celle=49;
-            numero_colonne = 7;
-            console.log(numero_celle, numero_colonne);
+    }else if(scelta == "medium"){
+        cell_number = 81;
+        col_number = 9;
+        console.log("Livello facile", col_number, cell_number);
+        generateGrid(col_number, cell_number);
+    }else if(scelta == "hard"){
+        cell_number = 49;
+        col_number = 7;
+        console.log("Livello facile", col_number, cell_number);
+        generateGrid(col_number, cell_number);
+    }else{
+        console.log("scelta errata");
     }
 
-   genera_griglia(numero_celle, numero_colonne);
+    
 }
 
-
-function genera_griglia(numero_celle ,numero_colonne){
-
-const area_gioco = document.querySelector(".main .cells");
-
-area_gioco.innerHTML=""
-
-for(let i = 1; i<=numero_celle; i++){
-
-    let cella = document.createElement("div");
-    cella.append(i);
-    cella.classList.add("cella");
-    cella.style.width=`calc(100% / ${numero_colonne})`
-    area_gioco.append(cella);
-}
-
-}
-
-function generate_number(){
-    for(let i = 0; i<16; i++){
-        let numeri_casuali = Math.floor(Math.random() *100) +1;
-        console.log(numeri_casuali);
+function generateGrid(col_number,cell_number){
+    const area_game = document.querySelector(".cells");
+    console.log(area_game);
+    
+    
+    
+    area_game.innerHTML="";
+    for(let i = 1; i<=cell_number; i++){
+        const cell = document.createElement("div");
+        cell.append(i);
+        cell.classList.add("cell");
+        cell.style.width=`calc(100% / ${col_number})`;
+        area_game.append(cell);
     }
+
 }
+
+
+
+//Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
+// - 1) Selezioniamo le celle

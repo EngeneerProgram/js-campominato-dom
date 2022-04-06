@@ -2,65 +2,59 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
-    
 }
 
 header{
     height: 10vh;
+    
     display:flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: center;   
 }
-
-img{
+.logo{
+    width: 80px;
     vertical-align: middle;
+    
 }
-
-
-footer{
-    height: 10vh;
-
-}
-
 .main{
-   
-    background-color: rgba(127, 255, 212, 1);
     display:flex;
+    justify-content: center;
     align-items: center;
-    justify-content: center;
 }
 
-#livello{
-    font-size: 15px;
-    margin:20px;
-}
-
-.btn{
-    font-size: 15px;
-    padding: 1px 6px;
-}
-
-.container{
-    width: 1000px;
-    
-    margin:2rem auto;
-    display:flex;
-    justify-content: center;
-    
-    
-}
-
-
-.cells{
-    display:flex;
-    flex-wrap: wrap;
+.btn, .start{
+    padding:2px 5px;
+    text-align: center;
     cursor:pointer;
 }
 
-.cella{
-    border:1px solid black;
+.container{
+    width: 600px;
+    display:Flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cell{
     aspect-ratio: 1 / 1;
     display:flex;
     justify-content: center;
     align-items: center;
+    border:2px solid black;
+    
+}
+
+.cells{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    cursor: pointer;
+    
+}
+
+.color_cells{
+background-color: blue;
+color:white;
 }
