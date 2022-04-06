@@ -25,7 +25,7 @@ o raggiunge il numero massimo possibile di numeri consentiti.
 
 const game = document.querySelector(".start").addEventListener("click",function(){
     start_game();
-    
+    change_color();
 })
 
 function start_game(){
@@ -40,7 +40,7 @@ function start_game(){
         col_number = 10;
         console.log("Livello facile", col_number, cell_number);
         generateGrid(col_number, cell_number);
-        change_color();
+        
 
         
         
@@ -80,15 +80,16 @@ function generateGrid(col_number,cell_number){
 
 //change color
 function change_color(){
-   const cella = document.querySelectorAll(".cells");
-   console.log(cella);
-    for(let i = 0; i<cella.length; i++){
-        cella.addEventListener("click", function(event){
-            cella[i].backgroundColor = "red";
-        })
-    }
+   let game_cel = document.querySelectorAll(".cell");
+   
+   for(let i = 0; i<game_cel.length; i++){
+       game_cel[i].addEventListener("click",function(){
+          console.log("ok")
+       })
+       
+   }
   }
-    
+
 
 
 
