@@ -41,6 +41,7 @@ function start_game(){
         generateGrid(col_number, cell_number);
         
         
+        
     }else if(scelta == "medium"){
         cell_number = 81;
         col_number = 9;
@@ -75,7 +76,11 @@ function generateGrid(col_number,cell_number){
 
 }
 
+//change color
+function change_color(){
+    let cella = document.querySelectorAll(".cell").addEventListener("click", function(){
+        console.log("ok");
+    })
+}
 
 
-//Quando l'utente clicca su ogni cella, la cella cliccata si colora di azzurro.
-// - 1) Selezioniamo le celle
