@@ -34,13 +34,14 @@ function start_game(){
     const scelta = document.getElementById("scelta").value;
     console.log(scelta);
 
+
     if(scelta == "easy"){
         cell_number = 100;
         col_number = 10;
         console.log("Livello facile", col_number, cell_number);
         generateGrid(col_number, cell_number);
-        
-        
+        change_color(cella);
+        const cella = document.querySelectorAll(".cells");
         
     }else if(scelta == "medium"){
         cell_number = 81;
@@ -78,7 +79,7 @@ function generateGrid(col_number,cell_number){
 
 //change color
 function change_color(){
-    let cella = document.querySelectorAll(".cell").addEventListener("click", function(){
+    const cella = document.querySelectorAll(".cells").addEventListener("onclick", function(){
         console.log("ok");
     })
 }
