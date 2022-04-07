@@ -84,7 +84,8 @@ function change_color(){
    
    for(let i = 0; i<game_cel.length; i++){
        game_cel[i].addEventListener("click",function(){
-          console.log("ok")
+          console.log("ok");
+          game_cel[i].style.backgroundColor = "aquamarine"
        })
        
    }
